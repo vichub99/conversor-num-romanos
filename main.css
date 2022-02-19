@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000025;
+  font-family: "Rubik", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.6rem;
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #226;
+  padding: 4rem;
+  width: 40rem;
+}
+
+.card__input,
+.card__button {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.card__input {
+  background-color: #224;
+  border: none;
+  outline: none;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  position: relative;
+  text-align: center;
+}
+
+.card__input:focus {
+  border-bottom: 0.3rem solid #25d;
+  margin-bottom: 1.2rem;
+  background-color: #000025;
+}
+
+.card__input::placeholder {
+  font-size: 1.5rem;
+  letter-spacing: normal;
+  color: #258;
+}
+
+.card__input:focus::placeholder {
+  color: #000025;
+}
+
+/* quitar decoracion input number */
+/* Chrome, Safari, Edge, Opera */
+.card__input::-webkit-outer-spin-button,
+.card__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* Firefox */
+.card__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.card__button {
+  background-color: #258;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.card__button:hover {
+  background-color: #25d;
+}
+
+.card__button:active {
+  background-color: #25a;
+}
+
+.card__solution {
+  width: 100%;
+  padding: 1rem;
+  height: 6.4rem;
+  font-size: 3.3rem;
+  background-color: #000025;
+  text-align: center;
+  color: #fff;
+  border: 0.3rem solid #25d;
+  letter-spacing: 0.2rem;
+  margin-top: 6rem;
+}
+
+.card__solution:empty {
+  visibility: hidden;
+}
+
+.card__solution__error {
+  width: 32rem;
+  padding: 1rem;
+  height: 6.4rem;
+  font-size: 1.6rem;
+  background-color: #4c0000;
+  text-align: center;
+  color: #fa8072;
+  margin-top: 6rem;
+}
+
+@media screen and (max-width: 850px) {
+  .main {
+    max-width: 90%;
+  }
+
+  .card {
+    max-width: 98%;
+    padding: 2.5rem;
+  }
+
+  .card__input,
+  .card__button,
+  .card__solution,
+  .card__solution__error {
+    max-width: 100%;
+  }
+
+  .card__solution {
+    letter-spacing: normal;
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+
+  .card__solution__error {
+    padding: 0.4rem;
+  }
+}
